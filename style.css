@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+.skill-container{
+    background-color: aquamarine;
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 25px;
+    padding: 10px;
+}
+.skill-container li{
+    list-style: none;
+    text-transform: uppercase;
+    margin: 50px 0;
+    position: relative;
+}
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    background-color: bisque;
+    width: 100%;
+    height: 25px;
+    top: calc(100% + 10px);
+    left: 0px;
+    border-radius: 1000px;
+}
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 25px;
+    top: calc(100% + 10px);
+    left: 0px;
+    border-radius: 1000px;
+
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-direction: forward;
+    animation-timing-function: linear;
+    /* animation-iteration-count: 5; */
+    animation-fill-mode: forwards;
+}
+.skill-container li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 95%;
+        background-color: rgb(55, 99, 234);
+    }
+}
+.skill-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 70%;
+        background-color: rgb(55, 99, 234);
+    }
+}
+.skill-container li.bootstarp::after{
+    animation-name: bootstarp;
+}
+@keyframes bootstarp{
+    to{
+        width: 75%;
+        background-color: rgb(55, 99, 234);
+    }
+}
+.skill-container li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 60%;
+        background-color: rgb(55, 99, 234);
+    }
+}
+.skill-container li.java::after{
+    animation-name: java;
+}
+@keyframes java{
+    to{
+        width: 40%;
+        background-color: rgb(55, 99, 234);
+    }
+}
+.skill-container li.cplus::after{
+    animation-name: cplus;
+}
+@keyframes cplus{
+    to{
+        width: 40%;
+        background-color: rgb(55, 99, 234);
+    }
+}
